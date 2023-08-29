@@ -1,20 +1,47 @@
 import React from 'react';
 import "./card.css";
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-function Card() {
-  return (
-    <div>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"></img>
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-        </div>
-      </div>
-    </div>
-  )
-}
+export default function Card() {
+  const SECRET_API_KEY = 'bfe13edcfcaf4ba68c6a3232aad57f63'
+  //API url sorted my muisc, latest published and english articles
+  const url = 'https://newsapi.org/v2/everything?q=music&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
+  const url2 = 'https://api.dictionaryapi.dev/api/v2/entries/en/hello';
+  const [article, setArticle] = useState();
 
-export default Card
+  useEffect(() => {
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const map = data.articles[3];
+          //Make the returned values of article object an array
+          // const result = Object.keys(map).map((key) => map[key]);
+          const result = Object.values(map);
+          setArticle(result);
+          console.log(result)
+        });
+      }, []);
+
+  return(
+    <>
+    <p key="title">title : {article[2]}</p>
+    <p key="article">text : {article[3]}</p>
+      {/* { article ? article.map((index) => {
+        return (
+          <div className='article-card'>
+          <p key = {uuidv4} >
+            {index + ' '}
+          </p>
+          </div>
+        );
+      }) : null} */}
+
+
+    
+    </>
+
+  );
+}  
+
+
