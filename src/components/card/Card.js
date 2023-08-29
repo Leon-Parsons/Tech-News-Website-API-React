@@ -24,23 +24,12 @@ export default function Card() {
       }, []);
 
   return(
-    <>
-    <p key="title">title : {article[2]}</p>
-    <p key="article">text : {article[3]}</p>
-      {/* { article ? article.map((index) => {
-        return (
-          <div className='article-card'>
-          <p key = {uuidv4} >
-            {index + ' '}
-          </p>
-          </div>
-        );
-      }) : null} */}
-
-
-    
-    </>
-
+    <div className='article-card'>
+      <p key="title">title : {article[2]}</p>
+      <p key="article">text : {article[3]}</p>
+      <p key="articleLink">link : {article[4]}</p>
+      <p key="imageLink">Image-link : {article[5]}</p>
+    </div>
   );
 }  
 
