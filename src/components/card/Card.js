@@ -14,7 +14,7 @@ export default function Card() {
       fetch(url)
         .then(response => response.json())
         .then(data => {
-          const map = data.articles[3];
+          const map = data.articles[2];
           //Make the returned values of article object an array
           // const result = Object.keys(map).map((key) => map[key]);
           const result = Object.values(map);
@@ -25,10 +25,11 @@ export default function Card() {
 
   return(
     <div className='article-card'>
-      <p key="title">title : {article[2]}</p>
-      <p key="article">text : {article[3]}</p>
-      <p key="articleLink">link : {article[4]}</p>
-      <p key="imageLink">Image-link : {article[5]}</p>
+      <a href={article[4]}>
+        <img src={article[5]} alt="sorry, image unavailable"></img>
+        <p id="a-title" key="title">{article[2]}</p>
+        <p id="a-text" key="article">{article[3]}</p>
+      </a>
     </div>
   );
 }  

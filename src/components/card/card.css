@@ -4,3 +4,8 @@
   max-height: 600px;
   word-wrap: break-word;
 }
+
+#a-title {
+  text-align: center;
+  font-size: large;
+}
