@@ -3,7 +3,7 @@ import "./card.css";
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Card() {
+export default function Card(props) {
   const SECRET_API_KEY = 'bfe13edcfcaf4ba68c6a3232aad57f63'
   //API url sorted my muisc, latest published and english articles
   const url = 'https://newsapi.org/v2/everything?q=music&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
@@ -14,7 +14,7 @@ export default function Card() {
       fetch(url)
         .then(response => response.json())
         .then(data => {
-          const map = data.articles[2];
+          const map = data.articles[props.articleNum];
           //Make the returned values of article object an array
           // const result = Object.keys(map).map((key) => map[key]);
           const result = Object.values(map);
@@ -30,6 +30,7 @@ export default function Card() {
         <p id="a-title" key="title">{article[2]}</p>
         <p id="a-text" key="article">{article[3]}</p>
       </a>
+      <h1>meme {props.articleNum}</h1>
     </div>
   );
 }  
