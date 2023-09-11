@@ -15,3 +15,9 @@
   font-family: sans-serif;
   font-weight: bold;
 }
+
+#headline {
+  font-size: 35px;
+  display:flex;
+  justify-content: center;
+}

@@ -9,7 +9,7 @@ export default function LatestArticles(props) {
   return (
     <>
       <section id='l-a-section'>
-        <h1 className='section-title'>Latest {props.title}</h1>
+        <h1 className='section-title' id="headline">Latest {props.title}</h1>
           <div id="l-a-display">
             <Card articleNum = {1} articleTopic = {props.apiUrl}/>
             <Card articleNum = {2} articleTopic = {props.apiUrl}/>
