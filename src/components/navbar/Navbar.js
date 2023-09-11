@@ -10,7 +10,7 @@ export default function Navbar() {
       <img id="hamburger-icon" src={hamlogo}></img>
       <div id="icon-title-div">
         <img id="nav-logo" src={flogo}></img>
-        <h1 id="nav-title">Fresh Tech News</h1>
+        <h1 id="nav-title">Fresh-As Tech News</h1>
       </div>
       <div id="search-sec">
         <img id="search-icon" src={searchIcon}></img>

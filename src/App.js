@@ -19,7 +19,7 @@ function App() {
       <Navbar/>
       <div id="page">
         <section id="primary-a-section">
-        <LatestArticles apiUrl = {urlTech} title = "Technology Headlines"/>
+        <LatestArticles apiUrl = {urlTech} title = "Top Tech Headlines"/>
         </section>
         <section id = "category-a-section">
         <CategoryArticles apiUrl = {urlAI} title = "AI"/>

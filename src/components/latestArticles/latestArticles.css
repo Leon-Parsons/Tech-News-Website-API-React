@@ -14,10 +14,12 @@
   font-size: 30px;
   font-family: sans-serif;
   font-weight: bold;
+  border-radius: 20px;
+  font-size: 35px;
+  display:flex;
+  justify-content: center;
 }
 
 #headline {
   font-size: 35px;
-  display:flex;
-  justify-content: center;
 }
