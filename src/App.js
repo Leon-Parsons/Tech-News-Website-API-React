@@ -7,7 +7,7 @@ import CategoryArticles from './components/categoryArticles/CategoryArticles';
 
 function App() {
 
-  const SECRET_API_KEY = '0b47a3928377426f9dc6e8445a6f91b6'
+  const SECRET_API_KEY = 'bfe13edcfcaf4ba68c6a3232aad57f63'
   const urlTech = 'https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=' + SECRET_API_KEY;
   const urlAI = 'https://newsapi.org/v2/everything?q=ai+artificialintelligence&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
   const urlGaming = 'https://newsapi.org/v2/everything?q=videogame+console&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
