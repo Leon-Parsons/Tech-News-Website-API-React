@@ -6,3 +6,28 @@
   margin: 0;
   padding: 0;
 }
+
+#page {
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#primary-a-section {
+  margin-left: 60px;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+#category-a-section {
+  position: relative;
+  margin-right: 60px;
+  width: 45%;
+  height: 45%;
+  align-items: center;
+  justify-content: center;
+}

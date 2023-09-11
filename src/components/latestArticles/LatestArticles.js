@@ -8,16 +8,19 @@ export default function LatestArticles(props) {
 
   return (
     <>
-    <section id='l-a-section'>
-      <h1 className='section-title'>Latest in {props.title}</h1>
-        <div id="l-a-display">
-          <Card articleNum = {1} articleTopic = {props.apiUrl}/>
-          <Card articleNum = {2} articleTopic = {props.apiUrl}/>
-          <Card articleNum = {3} articleTopic = {props.apiUrl}/>
-          <Card articleNum = {4} articleTopic = {props.apiUrl}/>
-          <Card articleNum = {5} articleTopic = {props.apiUrl}/>
-        </div>
-    </section>
+      <section id='l-a-section'>
+        <h1 className='section-title'>Latest {props.title}</h1>
+          <div id="l-a-display">
+            <Card articleNum = {1} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {2} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {3} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {4} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {5} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {6} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {7} articleTopic = {props.apiUrl}/>
+            <Card articleNum = {8} articleTopic = {props.apiUrl}/>
+          </div>
+      </section>
     </>
   )
 }

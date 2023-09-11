@@ -3,18 +3,31 @@ import Card from "./components/card/Card";
 import LatestArticles from './components/latestArticles/LatestArticles';
 import Navbar from "././components/navbar/Navbar";
 import { articleAPI } from './articleAPI';
+import CategoryArticles from './components/categoryArticles/CategoryArticles';
 
 function App() {
 
   const SECRET_API_KEY = '0b47a3928377426f9dc6e8445a6f91b6'
-  const urlAI = 'https://newsapi.org/v2/everything?q=ai&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
-  const urlGaming = 'https://newsapi.org/v2/everything?q=gaming&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
+  const urlTech = 'https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=' + SECRET_API_KEY;
+  const urlAI = 'https://newsapi.org/v2/everything?q=ai+artificialintelligence&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
+  const urlGaming = 'https://newsapi.org/v2/everything?q=videogame+console&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
+  const urlComputer = 'https://newsapi.org/v2/everything?q=computer+hardware&sortBy=publishedAt&language=en&apiKey=' + SECRET_API_KEY;
+
 
   return ( 
-      <div>
-        <LatestArticles apiUrl = {urlAI} title = "Artificial Intelligence"/>
-        <LatestArticles apiUrl = {urlGaming} title = "Gaming"/>
+    <>
+      <Navbar/>
+      <div id="page">
+        <section id="primary-a-section">
+        <LatestArticles apiUrl = {urlTech} title = "Technology Headlines"/>
+        </section>
+        <section id = "category-a-section">
+        <CategoryArticles apiUrl = {urlAI} title = "AI"/>
+        <CategoryArticles apiUrl = {urlGaming} title = "Gaming"/>
+        <CategoryArticles apiUrl = {urlComputer} title = "Computers"/>
+        </section>
       </div>
+    </>
   );
 }
 

@@ -1,0 +1,15 @@
+#c-a-section {
+  margin: 15px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px grey solid;
+}
+
+#c-a-display {
+  display:flex;
+}
+
+.section-title {
+  font-size: 30px;
+  color: rgb(87, 86, 86);
+}

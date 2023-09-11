@@ -2,6 +2,7 @@ import React from 'react';
 import "./card.css";
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import externalIcon from './externalIcon.png';
 
 export default function Card(props) {
   // const SECRET_API_KEY = '0b47a3928377426f9dc6e8445a6f91b6'
@@ -27,12 +28,14 @@ export default function Card(props) {
   return(
     <>
     <div className='article-card'>
-      <a id="card-content" href={article[4]} key="link">
+      <a id="card-content" href={article[4]} target="_blank" key="link">
         <div id="a-img-div">
           <img id='a-img' key="img" src={article[5]} alt="sorry, image unavailable"></img>
         </div>
-        <p id="a-title" key="title">{article[2]}</p>
-        <p id="a-text" key="article">{article[3]}</p>
+        <div id="a-text-body">
+          <p id="a-title" key="title">{article[2]}</p>
+          <p id="a-text" key="article">{article[3]}</p>
+        </div>
       </a>
     </div>
     </>
